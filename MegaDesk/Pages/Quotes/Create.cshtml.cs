@@ -16,6 +16,16 @@ namespace MegaDesk.Pages.Quotes
         public CreateModel(MegaDesk.Models.MegaDeskContext context)
         {
             _context = context;
+
+            //set up the list of surface materials from an enum per week 4 assignment. 
+            List<Quote.SurfaceMaterials> listMaterials = Enum.GetValues(typeof(Quote.SurfaceMaterials)).Cast<Quote.SurfaceMaterials>().ToList();
+
+            //cmbMaterial.DataSource = listMaterials;
+
+            //set up building options for drop down menu
+            //cmbBuildOption.DataSource = DeskQuote.BuildingOptionsList;
+
+
         }
 
         public IActionResult OnGet()
@@ -33,10 +43,18 @@ namespace MegaDesk.Pages.Quotes
                 return Page();
             }
 
+            //Instantiate DeskQuote and send the form information to it
+            DeskQuote dq = new DeskQuote(width, depth, countDrawer, material, buildOption, customerName);
+
+            //Get final quote
+            dq.CalcFinalQuote();
+
             _context.Quote.Add(Quote);
             await _context.SaveChangesAsync();
 
-            return RedirectToPage("./Index");
+
+            return  RedirectToPage("Details", new { id = DeskQuote.ID });
+
         }
     }
 }

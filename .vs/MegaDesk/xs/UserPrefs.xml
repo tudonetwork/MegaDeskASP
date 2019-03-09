@@ -1,0 +1,18 @@
+﻿<Properties StartupConfiguration="{E24C4878-1110-4B44-9B60-B32B69422B0A}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MegaDesk/Pages/Quotes/Create.cshtml.cs">
+    <Files>
+      <File FileName="MegaDesk/Models/DeskQuote.cs" Line="75" Column="1" />
+      <File FileName="MegaDesk/Models/rushOrderPrices.txt" Line="9" Column="3" />
+      <File FileName="MegaDesk/Pages/Quotes/Create.cshtml" Line="1" Column="1" />
+      <File FileName="MegaDesk/Pages/Quotes/Create.cshtml.cs" Line="74" Column="69" />
+      <File FileName="MegaDesk/Models/Quote.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.MegaDesk PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

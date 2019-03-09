@@ -17,17 +17,4 @@
   <ItemGroup>
     <Folder Include="Models\" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Remove="Pages\Quotes\Create.cshtml" />
-    <Content Remove="Pages\Quotes\Edit.cshtml" />
-    <Content Remove="Pages\Quotes\Details.cshtml" />
-    <Content Remove="Pages\Quotes\Delete.cshtml" />
-    <Content Remove="Pages\Quotes\Index.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Remove="Pages\Quotes\Edit.cshtml.cs" />
-    <Compile Remove="Pages\Quotes\Details.cshtml.cs" />
-    <Compile Remove="Pages\Quotes\Delete.cshtml.cs" />
-    <Compile Remove="Pages\Quotes\Index.cshtml.cs" />
-  </ItemGroup>
 </Project>
