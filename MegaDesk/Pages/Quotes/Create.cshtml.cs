@@ -17,15 +17,6 @@ namespace MegaDesk.Pages.Quotes
         {
             _context = context;
 
-            //set up the list of surface materials from an enum per week 4 assignment. 
-            List<Quote.SurfaceMaterials> listMaterials = Enum.GetValues(typeof(Quote.SurfaceMaterials)).Cast<Quote.SurfaceMaterials>().ToList();
-
-            //cmbMaterial.DataSource = listMaterials;
-
-            //set up building options for drop down menu
-            //cmbBuildOption.DataSource = DeskQuote.BuildingOptionsList;
-
-
         }
 
         public IActionResult OnGet()
@@ -38,22 +29,30 @@ namespace MegaDesk.Pages.Quotes
 
         public async Task<IActionResult> OnPostAsync()
         {
+
+        
             if (!ModelState.IsValid)
             {
                 return Page();
             }
 
+
             //Instantiate DeskQuote and send the form information to it
-            DeskQuote dq = new DeskQuote(width, depth, countDrawer, material, buildOption, customerName);
+            DeskQuote dq = new DeskQuote(Quote.Width, Quote.Depth, Quote.CountDrawer, Quote.SurfaceMaterial, Quote.BuildOption);
+
 
             //Get final quote
-            dq.CalcFinalQuote();
+            var fprice = dq.CalcFinalQuote();
+            Quote.FinalCost = fprice;
+
+            // Get Date Now 2019-01-01 00:00:00
+            Quote.Date = DateTime.Now;
 
             _context.Quote.Add(Quote);
             await _context.SaveChangesAsync();
 
+            return RedirectToPage("Details", new { id = Quote.ID });
 
-            return  RedirectToPage("Details", new { id = DeskQuote.ID });
 
         }
     }

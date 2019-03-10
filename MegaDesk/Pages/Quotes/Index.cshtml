@@ -5,16 +5,19 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Desk Quotes</h1>
 
 <p>
-    <a asp-page="Create">Create New</a>
+    <a asp-page="Create" class="btn">Create New</a>
 </p>
-<table class="table">
+<table id="quotesTable" class="table">
     <thead>
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Quote[0].Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quote[0].CustomerName)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Quote[0].Width)
@@ -28,9 +31,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.Quote[0].SurfaceMaterial)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Quote[0].CustomerName)
-            </th>
+
             <th>
                 @Html.DisplayNameFor(model => model.Quote[0].BuildOption)
             </th>
@@ -41,30 +42,31 @@
         </tr>
     </thead>
     <tbody>
+    
 @foreach (var item in Model.Quote) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Date)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Width)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Depth)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CountDrawer)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SurfaceMaterial)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.CustomerName)
             </td>
-            <td>
+            <td class="no-sort">
+                @Html.DisplayFor(modelItem => item.Width)
+            </td>
+            <td class="no-sort">
+                @Html.DisplayFor(modelItem => item.Depth)
+            </td>
+            <td class="no-sort">
+                @Html.DisplayFor(modelItem => item.CountDrawer)
+            </td>
+            <td class="no-sort">
+                @Html.DisplayFor(modelItem => item.SurfaceMaterial)
+            </td>
+            <td class="no-sort">
                 @Html.DisplayFor(modelItem => item.BuildOption)
             </td>
-            <td>
+            <td class="no-sort">
                 @Html.DisplayFor(modelItem => item.FinalCost)
             </td>
             <td>

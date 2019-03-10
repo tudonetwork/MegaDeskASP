@@ -17,4 +17,10 @@
   <ItemGroup>
     <Folder Include="Models\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\css\custom.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\css\custom.css" />
+  </ItemGroup>
 </Project>

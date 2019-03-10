@@ -64,9 +64,9 @@ body {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #212529;
+    color: #A9A9A9;
     text-align: left;
-    background-color: #fff;
+    background-color: #EFEFEF;
 }
 
 [tabindex="-1"]:focus {
@@ -161,14 +161,13 @@ sup {
 }
 
 a {
-    color: #007bff;
+    color: #FF3B3F;
     text-decoration: none;
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
 }
 
     a:hover {
-        color: #0056b3;
         text-decoration: underline;
     }
 
@@ -419,6 +418,7 @@ h6, .h6 {
     font-size: 3.5rem;
     font-weight: 300;
     line-height: 1.2;
+    color: #a9a9a9;
 }
 
 hr {
@@ -2506,14 +2506,14 @@ fieldset:disabled a.btn {
 
 .btn-primary {
     color: #fff;
-    background-color: #007bff;
-    border-color: #007bff;
+    background-color: #FF3B3F;
+    border-color: #FF3B3F;
 }
 
     .btn-primary:hover {
         color: #fff;
-        background-color: #0069d9;
-        border-color: #0062cc;
+        /*background-color: #0069d9;*/
+        border-color: #CAEBF2;
     }
 
     .btn-primary:focus, .btn-primary.focus {
@@ -4469,19 +4469,19 @@ input[type="button"].btn-block {
     }
 
 .navbar-light .navbar-brand {
-    color: rgba(0, 0, 0, 0.9);
+    color: #FF3B3F;
 }
 
     .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
-        color: rgba(0, 0, 0, 0.9);
+        text-decoration: underline;
     }
 
 .navbar-light .navbar-nav .nav-link {
-    color: rgba(0, 0, 0, 0.5);
+    color: #FF3B3F;
 }
 
     .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
-        color: rgba(0, 0, 0, 0.7);
+        text-decoration: underline;
     }
 
     .navbar-light .navbar-nav .nav-link.disabled {

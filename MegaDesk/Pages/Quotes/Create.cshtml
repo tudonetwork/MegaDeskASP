@@ -13,10 +13,14 @@
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
+            <!--<div class="form-group">
                 <label asp-for="Quote.Date" class="control-label"></label>
                 <input asp-for="Quote.Date" class="form-control" />
-                <span asp-validation-for="Quote.Date" class="text-danger"></span>
+            </div>-->
+            <div class="form-group">
+                <label asp-for="Quote.CustomerName" class="control-label"></label>
+                <input asp-for="Quote.CustomerName" class="form-control" />
+                <span asp-validation-for="Quote.CustomerName" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Quote.Width" class="control-label"></label>
@@ -30,29 +34,25 @@
             </div>
             <div class="form-group">
                 <label asp-for="Quote.CountDrawer" class="control-label"></label>
-                <input asp-for="Quote.CountDrawer" class="form-control" />
+                <input asp-for="Quote.CountDrawer" min="0" max="7" class="form-control" />
                 <span asp-validation-for="Quote.CountDrawer" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Quote.SurfaceMaterial" class="control-label"></label>
-                <input asp-for="Quote.SurfaceMaterial" class="form-control" />
-                <span asp-validation-for="Quote.SurfaceMaterial" class="text-danger"></span>
+                <select asp-for="Quote.SurfaceMaterial" class="form-control" asp-items="Html.GetEnumSelectList<Models.Quote.SurfaceMaterials>()"></select>
             </div>
-            <div class="form-group">
-                <label asp-for="Quote.CustomerName" class="control-label"></label>
-                <input asp-for="Quote.CustomerName" class="form-control" />
-                <span asp-validation-for="Quote.CustomerName" class="text-danger"></span>
-            </div>
+
             <div class="form-group">
                 <label asp-for="Quote.BuildOption" class="control-label"></label>
-                <input asp-for="Quote.BuildOption" class="form-control" />
+                <select asp-for="Quote.BuildOption" class="form-control">
+                    <option value="3">3</option>
+                    <option value="5">5</option>
+                    <option value="7">7</option>
+                    <option value="14">14</option>
+                </select>
                 <span asp-validation-for="Quote.BuildOption" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Quote.FinalCost" class="control-label"></label>
-                <input asp-for="Quote.FinalCost" class="form-control" />
-                <span asp-validation-for="Quote.FinalCost" class="text-danger"></span>
-            </div>
+ 
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

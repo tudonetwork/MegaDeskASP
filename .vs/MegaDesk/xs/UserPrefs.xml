@@ -1,11 +1,17 @@
 ﻿<Properties StartupConfiguration="{E24C4878-1110-4B44-9B60-B32B69422B0A}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="MegaDesk/Pages/Quotes/Create.cshtml.cs">
     <Files>
-      <File FileName="MegaDesk/Models/DeskQuote.cs" Line="75" Column="1" />
+      <File FileName="MegaDesk/Models/DeskQuote.cs" Line="42" Column="37" />
       <File FileName="MegaDesk/Models/rushOrderPrices.txt" Line="9" Column="3" />
-      <File FileName="MegaDesk/Pages/Quotes/Create.cshtml" Line="1" Column="1" />
-      <File FileName="MegaDesk/Pages/Quotes/Create.cshtml.cs" Line="74" Column="69" />
-      <File FileName="MegaDesk/Models/Quote.cs" Line="1" Column="1" />
+      <File FileName="MegaDesk/Pages/Quotes/Create.cshtml" Line="51" Column="51" />
+      <File FileName="MegaDesk/Pages/Quotes/Create.cshtml.cs" Line="40" Column="13" />
+      <File FileName="MegaDesk/Models/Quote.cs" Line="32" Column="39" />
+      <File FileName="MegaDesk/Pages/Shared/_Layout.cshtml" Line="19" Column="54" />
+      <File FileName="MegaDesk/Pages/Quotes/Index.cshtml" Line="8" Column="5" />
+      <File FileName="MegaDesk/wwwroot/lib/bootstrap/dist/css/bootstrap.css" Line="9698" Column="18" />
+      <File FileName="MegaDesk/wwwroot/css/custom.css" Line="30" Column="24" />
+      <File FileName="MegaDesk/Pages/Quotes/Edit.cshtml" Line="53" Column="62" />
+      <File FileName="MegaDesk/Pages/Quotes/Edit.cshtml.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

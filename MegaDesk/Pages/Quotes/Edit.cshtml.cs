@@ -45,6 +45,14 @@ namespace MegaDesk.Pages.Quotes
                 return Page();
             }
 
+
+            //Instantiate DeskQuote and send the form information to it
+            DeskQuote dq = new DeskQuote(Quote.Width, Quote.Depth, Quote.CountDrawer, Quote.SurfaceMaterial, Quote.BuildOption);
+
+            //Get final quote
+            var fprice = dq.CalcFinalQuote();
+            Quote.FinalCost = fprice;
+
             _context.Attach(Quote).State = EntityState.Modified;
 
             try
